@@ -2,7 +2,6 @@ import { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
 
-
 export function AuthContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
