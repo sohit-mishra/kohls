@@ -1,16 +1,14 @@
-import { Routes ,Route } from 'react-router-dom'
-import Home from './component/Home';
+import React from 'react'
+import Footer from './component/Footer';
+import Navbar from './component/Footer';
+import AllRoutes from './Router/AllRoutes';
 
-function App() {
-
+export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <>
+      <Navbar/>
+         <AllRoutes/>
+      <Footer/>
+    </>
   )
 }
-
-export default App
