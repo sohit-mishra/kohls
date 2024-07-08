@@ -11,16 +11,16 @@ export default function Markdown() {
             </Box>
 
 
-            <Box width="50%" textAlign="center" display={"flex"} flexDirection={"column"}>
-                <Text fontWeight={"bold"} fontSize={"19px"} margin={2}>
-                    SAVE UP TO</Text>
-                <Text fontSize="7vw" padding={0} margin={0} >
+            <Box width="50%" alignItems="center" color={"#fff"} display={"flex"} flexDirection={"column"}>
+                <Text fontWeight={"bold"} fontSize={"19px"} padding={"0"} margin={"20px auto -26px"} >
+                    SAVE UP TO </Text>
+                <Text fontSize="100px" padding={0} margin={0} >
                     70%
                 </Text>
-                <Button bgColor="#000" color="#fff" borderRadius="20px">
+                <Button bgColor="#000" color="#fff" borderRadius="20px" width={"140px"}>
                     Shop Now
                 </Button>
-                <Text>
+                <Text margin={"20px auto"}>
                     Limited quantities available. More sizes and styles available in store.
                 </Text>
             </Box>
