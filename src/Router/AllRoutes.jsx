@@ -6,7 +6,6 @@ import Home from './Home';
 // import Search from './Router/Search';
 // import Card from './Router/Card';
 // import Help from './Router/Help';
-// import Contactus from './Router/Contactus';
 // import Product from './Router/Product';
 // import Drashboard from './Router/Drashboard';
 
@@ -22,7 +21,6 @@ export default function AllRoutes() {
       <Route path="/" element={<Card />} />
       <Route path="/" element={<Copuons />} />
       <Route path="/" element={<Help />} />
-      <Route path="/" element={<Contactus />} />
       <Route path="/" element={<Product />} />
       <Route path="/" element={<Drashboard />} />
       <Route path="/" element={<Drashboard />} /> */}

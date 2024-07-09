@@ -3,12 +3,14 @@ import RedComponent from '../component/Home/RedComponent';
 import BlackComponent from '../component/Home/BlackComponent';
 import BabiesComponent from '../component/Home/BabiesComponent';
 import Markdown from '../component/Home/Markdown';
-import { Box, Flex, Heading, Text, Image} from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
 import TodayBuy from '../component/Home/TodayBuy';
 import Card from '../component/Home/Card';
 import Paragraph from '../component/Home/Paragraph';
 import Sephora from '../component/Home/Sephora';
 import Summer from '../assets/summer.svg';
+import SmallComponent from '../component/Home/SmallComponent';
+import Banner from '../component/Home/Banner';
 
 export default function Home() {
   var menuItems = [
@@ -109,14 +111,45 @@ export default function Home() {
   ]
 
 
+  const smallComponent = [
+    {
+      "heading": "Earn $10 Kohl’s Cash®",
+      "content": "For every $50 spent through July 11. Not valid on Sephora at Kohl’s.",
+      "actionText": "details",
+      "imageLink": "https://media.kohlsimg.com/is/image/kohls/2023619-digital-wallet-kcash?fmt=png8-alpha&scl=1",
+      "bgColor": "#eef4d8"
+    },
+    {
+      "heading": "Have a Kohl’s return?",
+      "content": "It’s quick & hassle free!",
+      "actionText": "Learn More",
+      "imageLink": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 28 32\"><path id=\"ic-shopping-bag\" d=\"M10,8v3.5a1,1,0,0,0,2,0V8h8v3.5a1,1,0,0,0,2,0V8h5a1,1,0,0,1,1,1V27a3,3,0,0,1-3,3H7a3,3,0,0,1-3-3V9A1,1,0,0,1,5,8ZM22,6h5a3,3,0,0,1,3,3V27a5,5,0,0,1-5,5H7a5,5,0,0,1-5-5V9A3,3,0,0,1,5,6h5a5.9,5.9,0,0,1,6-6A5.9,5.9,0,0,1,22,6ZM20,6a3.9,3.9,0,0,0-4-4,3.9,3.9,0,0,0-4,4Z\" transform=\"translate(-2)\" fill=\"%23fff\" fill-rule=\"evenodd\"/></svg>",
+      "bgColor": "#820033"
+    },
+    {
+      "heading": "SEPHORA + KOHL’S",
+      "content": "Shop the best in beauty from the brands you know and love.",
+      "actionText": "Shop Now",
+      "imageLink": "https://media.kohlsimg.com/is/image/kohls/hp-sp-231027-sephora-stripes-bkgd?fmt=png8-alpha&scl=1",
+      "bgColor": "#000000"
+    }
+  ]
+
+
   return (
     <div>
 
+      <Flex padding={"0 20px"} justifyContent={"space-around"} margin={"60px 30px"}>
+        {smallComponent.map((item, index) => (
+          <SmallComponent key={index} imageLink={item.imageLink} bgColor={item.bgColor} heading={item.heading} content={item.content} actionText={item.actionText} number={index+1}/>
+        ))}
+      </Flex>
 
-      
+
+      <Banner/>
 
 
-      <Image src={Summer} width={"50%"} display={"block"} margin={"40px auto"}/>
+      <Image src={Summer} width={"50%"} display={"block"} margin={"40px auto"} />
 
       <Flex padding={"0 20px"}>
         {menuItems.map((item, index) => (
